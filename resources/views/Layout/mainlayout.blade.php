@@ -5,7 +5,7 @@
     <title>UC Showroom</title>
 </head>
 <body>
-    {{-- @include('layout.navbar') --}}
+    @include('layout.navbar')
     {{-- pt = padding top --}}
     <div class="container pt-5">   
     

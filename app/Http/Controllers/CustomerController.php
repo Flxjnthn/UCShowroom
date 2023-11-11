@@ -44,16 +44,18 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'address' => 'required',
-            'phone' => 'required',
-            'id_card' => 'required',
-        ]);
-
-        Customer::create($request->all());
-
-        return redirect()->route('customer.create')->with('success', 'Customer berhasil ditambahkan!');
+        {
+            $request->validate([
+                'name' => 'required',
+                'address' => 'required',
+                'phone' => 'required',
+                'id_card' => 'required',
+            ]);
+    
+            Customer::create($request->all());
+    
+            return redirect()->route('customer.create')->with('success', 'Customer berhasil ditambahkan!');
+        }
     }
 
     /**

@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\VehicleController;
+
 
 
 /*
@@ -24,3 +27,5 @@ Route::get('/customer/create', [CustomerController::class, 'create'])->name('cus
 // Route::get('/customer', [CustomerController::class, 'index'])->name('customer.index');
 
 Route::resource('customer', CustomerController::class);
+Route::resource('order', OrderController::class);
+Route::resource('vehicle', VehicleController::class);
